@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Web" parallel="false" thread-count="1">
+
+	<parameter name="url" value="https://newpwa.zee5.com/" />
+	<parameter name="browserType" value="Chrome" />  <!-- Chrome/Firefox -->
+
+	<parameter name="userType" value="Guest" /> <!-- Guest/NonSubscribedUser/SubscribedUser -->
+	<parameter name="runModule" value="Suite" />
+	<parameter name="runMode" value="Suites" />
+	<parameter name="keyword" value="Jodi Hakki" />
+	<parameter name="keyword1" value="Shivaji Surathkal" />
+	<parameter name="keyword2" value="Chemistry of Kariyappa" />
+
+	<!-- NONSubscribed User -->
+	<parameter name="NonsubscribedUserName"
+		value="basavaraj.pn5@gmail.com" />
+	<parameter name="NonsubscribedPassword" value="igsindia123" />
+	<!-- Subscribed User -->
+	<parameter name="SubscribedUserName"
+		value="zeetest10@test.com" />
+	<parameter name="SubscribedPassword" value="123456" />
+	<parameter name="keyword4" value="Paaru gets tipsy" />
+	<parameter name="keyword5" value="Bhinna" />
+
+
+	<listeners>
+		<listener class-name="com.extent.ExtentReporter" />
+		<!-- <listener class-name="com.extent.ParameterInjector" /> -->
+		<!-- <listener class-name="com.utility.MyTranformer"/> -->
+	</listeners>
+
+	<test name="WebPWAMixpanelScript">
+		<classes>
+			<class name="com.zee5.PWAMixpanelScripts.WebPWAMixpanelScript" />
+		</classes>
+	</test>
+
+
+
+</suite>

@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Android</th></tr><tr><td><a href="#t0">Android_LandingScreen_TopNavigation</a></td><td class="num">7</td><td class="num">0</td><td class="num attn">4</td><td class="num">4,415,484</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Android</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Android_LandingScreen_TopNavigation &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation</td><td><a href="#m0">ChannelGuide_LandingScreen</a></td><td rowspan="1">1602062877524</td><td rowspan="1">124946</td></tr><tr class="failedeven"><td><a href="#m1">LiveTV_landingScreen</a></td><td rowspan="1">1602062616850</td><td rowspan="1">260237</td></tr><tr class="failedeven"><td><a href="#m2">Music_LandingScreen</a></td><td rowspan="1">1602062540101</td><td rowspan="1">76305</td></tr><tr class="failedeven"><td><a href="#m3">Zee5Originals_LandingScreen</a></td><td rowspan="1">1602063002844</td><td rowspan="1">66314</td></tr><tr><th colspan="4">Android_LandingScreen_TopNavigation &#8212; passed</th></tr><tr class="passedeven"><td rowspan="7">com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation</td><td><a href="#m4">Home_LandingScreen</a></td><td rowspan="1">1602058732835</td><td rowspan="1">623660</td></tr><tr class="passedeven"><td><a href="#m5">Kids_LandingScreen</a></td><td rowspan="1">1602061481077</td><td rowspan="1">1057417</td></tr><tr class="passedeven"><td><a href="#m6">Login</a></td><td rowspan="1">1602058705701</td><td rowspan="1">26896</td></tr><tr class="passedeven"><td><a href="#m7">Movies_LandingScreen</a></td><td rowspan="1">1602060182567</td><td rowspan="1">308336</td></tr><tr class="passedeven"><td><a href="#m8">News_LandingScreen</a></td><td rowspan="1">1602060715721</td><td rowspan="1">764787</td></tr><tr class="passedeven"><td><a href="#m9">Premium_LandingScreen</a></td><td rowspan="1">1602060491407</td><td rowspan="1">223788</td></tr><tr class="passedeven"><td><a href="#m10">Shows_LandinScreen</a></td><td rowspan="1">1602059356989</td><td rowspan="1">825085</td></tr></tbody></table><h2>Android_LandingScreen_TopNavigation</h2><h3 id="m0">com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation#ChannelGuide_LandingScreen</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>NonSubscribedUser</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@resource-id=&apos;com.graymatrix.did:id/title&apos; and @text=&apos;Channel Guide&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.utility.Utilities.findElement(Utilities.java:134)
+	at com.business.zee.Zee5ApplicasterBusinessLogic.channelGuideScreenValidation(Zee5ApplicasterBusinessLogic.java:6625)
+	at com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation.ChannelGuide_LandingScreen(Android_LandingScreen_TopNavigation.java:98)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element (An element could not be located on the page using the given search parameters (XPATH=&apos;//*[@resource-id=&apos;com.graymatrix.did:id/title&apos; and @text=&apos;Channel Guide&apos;]&apos;))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-L251IQDV&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_45&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.applicaster.componentsa..., appBuildVersion: , appPackage: com.graymatrix.did, appReleaseVersion: , appiumVersion: 1.8.0, autoAcceptAlerts: true, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: uiautomator2, commandTimeouts: 120000, desired: {appActivity: com.applicaster.componentsa..., appPackage: com.graymatrix.did, autoAcceptAlerts: true, automationName: uiautomator2, deviceName: Android, fullReset: false, newCommandTimeout: 300, platformName: Android}, device.category: PHONE, device.majorVersion: 7, device.manufacture: Sony, device.model: F3116, device.name: sony-f3116-RQ30034UW3, device.os: Android, device.screenSize: 720x1280, device.serialNumber: RQ30034UW3, device.version: 7.0, deviceName: Android, deviceUDID: RQ30034UW3, dontGoHomeOnQuit: false, dontStopAppOnReset: false, fullReset: false, install.only.for.update: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newCommandTimeout: 300, newSessionWaitTimeout: 600, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportUrl: C:\Users\Aakarsh Yadav\appi..., reservationDuration: 240, takeScreenshots: true, test.type: Mobile, testName: mobile test 10/07/20 02:54 PM, udid: RQ30034UW3, useKeystore: false, waitForDeviceTimeout: 120000}
+Session ID: e5478f4e-96eb-4b7f-99ba-5b50972badc0
+*** Element info: {Using=xpath, value=//*[@resource-id=&apos;com.graymatrix.did:id/title&apos; and @text=&apos;Channel Guide&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 27 more
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m1">com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation#LiveTV_landingScreen</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>NonSubscribedUser</td><td>Live TV</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@resource-id=&apos;com.graymatrix.did:id/title&apos; and @text=&apos;Channel Guide&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.utility.Utilities.findElement(Utilities.java:134)
+	at com.business.zee.Zee5ApplicasterBusinessLogic.LiveTV(Zee5ApplicasterBusinessLogic.java:6561)
+	at com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation.LiveTV_landingScreen(Android_LandingScreen_TopNavigation.java:91)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element (An element could not be located on the page using the given search parameters (XPATH=&apos;//*[@resource-id=&apos;com.graymatrix.did:id/title&apos; and @text=&apos;Channel Guide&apos;]&apos;))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-L251IQDV&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_45&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.applicaster.componentsa..., appBuildVersion: , appPackage: com.graymatrix.did, appReleaseVersion: , appiumVersion: 1.8.0, autoAcceptAlerts: true, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: uiautomator2, commandTimeouts: 120000, desired: {appActivity: com.applicaster.componentsa..., appPackage: com.graymatrix.did, autoAcceptAlerts: true, automationName: uiautomator2, deviceName: Android, fullReset: false, newCommandTimeout: 300, platformName: Android}, device.category: PHONE, device.majorVersion: 7, device.manufacture: Sony, device.model: F3116, device.name: sony-f3116-RQ30034UW3, device.os: Android, device.screenSize: 720x1280, device.serialNumber: RQ30034UW3, device.version: 7.0, deviceName: Android, deviceUDID: RQ30034UW3, dontGoHomeOnQuit: false, dontStopAppOnReset: false, fullReset: false, install.only.for.update: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newCommandTimeout: 300, newSessionWaitTimeout: 600, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportUrl: C:\Users\Aakarsh Yadav\appi..., reservationDuration: 240, takeScreenshots: true, test.type: Mobile, testName: mobile test 10/07/20 02:54 PM, udid: RQ30034UW3, useKeystore: false, waitForDeviceTimeout: 120000}
+Session ID: e5478f4e-96eb-4b7f-99ba-5b50972badc0
+*** Element info: {Using=xpath, value=//*[@resource-id=&apos;com.graymatrix.did:id/title&apos; and @text=&apos;Channel Guide&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 27 more
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m2">com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation#Music_LandingScreen</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>NonSubscribedUser</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@resource-id=&apos;com.graymatrix.did:id/title&apos; and @selected=&apos;true&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.utility.Utilities.findElement(Utilities.java:134)
+	at com.utility.Utilities.getText(Utilities.java:359)
+	at com.business.zee.Zee5ApplicasterBusinessLogic.MusicLandingScreen(Zee5ApplicasterBusinessLogic.java:6707)
+	at com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation.Music_LandingScreen(Android_LandingScreen_TopNavigation.java:82)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element (An element could not be located on the page using the given search parameters (XPATH=&apos;//*[@resource-id=&apos;com.graymatrix.did:id/title&apos; and @selected=&apos;true&apos;]&apos;))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-L251IQDV&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_45&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.applicaster.componentsa..., appBuildVersion: , appPackage: com.graymatrix.did, appReleaseVersion: , appiumVersion: 1.8.0, autoAcceptAlerts: true, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: uiautomator2, commandTimeouts: 120000, desired: {appActivity: com.applicaster.componentsa..., appPackage: com.graymatrix.did, autoAcceptAlerts: true, automationName: uiautomator2, deviceName: Android, fullReset: false, newCommandTimeout: 300, platformName: Android}, device.category: PHONE, device.majorVersion: 7, device.manufacture: Sony, device.model: F3116, device.name: sony-f3116-RQ30034UW3, device.os: Android, device.screenSize: 720x1280, device.serialNumber: RQ30034UW3, device.version: 7.0, deviceName: Android, deviceUDID: RQ30034UW3, dontGoHomeOnQuit: false, dontStopAppOnReset: false, fullReset: false, install.only.for.update: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newCommandTimeout: 300, newSessionWaitTimeout: 600, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportUrl: C:\Users\Aakarsh Yadav\appi..., reservationDuration: 240, takeScreenshots: true, test.type: Mobile, testName: mobile test 10/07/20 02:22 PM, udid: RQ30034UW3, useKeystore: false, waitForDeviceTimeout: 120000}
+Session ID: 8a1df1d6-5611-4352-bb33-7bb003d1225a
+*** Element info: {Using=xpath, value=//*[@resource-id=&apos;com.graymatrix.did:id/title&apos; and @selected=&apos;true&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 28 more
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m3">com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation#Zee5Originals_LandingScreen</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>NonSubscribedUser</td><td>ZEE5 Originals</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //*[@resource-id=&apos;com.graymatrix.did:id/title&apos; and @selected=&apos;true&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.utility.Utilities.findElement(Utilities.java:134)
+	at com.utility.Utilities.getText(Utilities.java:359)
+	at com.business.zee.Zee5ApplicasterBusinessLogic.zee5OriginalsLandingScreen(Zee5ApplicasterBusinessLogic.java:6744)
+	at com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation.Zee5Originals_LandingScreen(Android_LandingScreen_TopNavigation.java:105)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element (An element could not be located on the page using the given search parameters (XPATH=&apos;//*[@resource-id=&apos;com.graymatrix.did:id/title&apos; and @selected=&apos;true&apos;]&apos;))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;LAPTOP-L251IQDV&apos;, ip: &apos;192.168.1.5&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_45&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {appActivity: com.applicaster.componentsa..., appBuildVersion: , appPackage: com.graymatrix.did, appReleaseVersion: , appiumVersion: 1.8.0, autoAcceptAlerts: true, autoDismissAlerts: false, autoGrantPermissions: false, autoWebview: false, automationName: uiautomator2, commandTimeouts: 120000, desired: {appActivity: com.applicaster.componentsa..., appPackage: com.graymatrix.did, autoAcceptAlerts: true, automationName: uiautomator2, deviceName: Android, fullReset: false, newCommandTimeout: 300, platformName: Android}, device.category: PHONE, device.majorVersion: 7, device.manufacture: Sony, device.model: F3116, device.name: sony-f3116-RQ30034UW3, device.os: Android, device.screenSize: 720x1280, device.serialNumber: RQ30034UW3, device.version: 7.0, deviceName: Android, deviceUDID: RQ30034UW3, dontGoHomeOnQuit: false, dontStopAppOnReset: false, fullReset: false, install.only.for.update: false, instrumentApp: false, javascriptEnabled: true, keystorePath: ~/.android/debug.keystore, locationServicesAuthorized: false, newCommandTimeout: 300, newSessionWaitTimeout: 600, noReset: false, platform: ANDROID, platformName: Android, projectName: , reportDirectory: reports, reportFormat: xml, reportUrl: C:\Users\Aakarsh Yadav\appi..., reservationDuration: 240, takeScreenshots: true, test.type: Mobile, testName: mobile test 10/07/20 02:54 PM, udid: RQ30034UW3, useKeystore: false, waitForDeviceTimeout: 120000}
+Session ID: e5478f4e-96eb-4b7f-99ba-5b50972badc0
+*** Element info: {Using=xpath, value=//*[@resource-id=&apos;com.graymatrix.did:id/title&apos; and @selected=&apos;true&apos;]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:239)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:151)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 28 more
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m4">com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation#Home_LandingScreen</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>NonSubscribedUser</td><td>Home</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m5">com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation#Kids_LandingScreen</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>NonSubscribedUser</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m6">com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation#Login</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>NonSubscribedUser</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m7">com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation#Movies_LandingScreen</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>NonSubscribedUser</td><td>Movies</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m8">com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation#News_LandingScreen</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>NonSubscribedUser</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m9">com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation#Premium_LandingScreen</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>NonSubscribedUser</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m10">com.zee5.ApplicasterScripts.Android_LandingScreen_TopNavigation#Shows_LandinScreen</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>NonSubscribedUser</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>
