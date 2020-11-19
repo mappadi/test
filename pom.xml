@@ -237,10 +237,10 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
-					<property>
+				<!--	<property>
 						<name>listener</name>
-						 <!--<value>com.epam.reportportal.testng.ReportPortalTestNGListener</value> -->
-					</property>
+						 <value>com.epam.reportportal.testng.ReportPortalTestNGListener</value>
+					</property>-->
 				</configuration>
 			</plugin>
 			<!-- Below plug-in is used to execute tests -->
@@ -255,7 +255,7 @@
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
 						<!-- <suiteXmlFile>${rp.launch}.xml</suiteXmlFile> -->
-						<suiteXmlFile>pwaSanityWeb.xml</suiteXmlFile>
+						<suiteXmlFile>Android_Applicaster.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
