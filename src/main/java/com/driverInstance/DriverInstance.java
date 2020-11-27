@@ -69,8 +69,8 @@ public class DriverInstance extends Drivertools {
 		capabilities.setCapability("pCloudy_DurationInMinutes", 20);
 		capabilities.setCapability("newCommandTimeout", 600);
 		capabilities.setCapability("launchTimeout", 90000);
-		capabilities.setCapability("pCloudy_DeviceFullName", "ONEPLUS_5_Android_9.0.0_d9e3e");
-		capabilities.setCapability("platformVersion", "9.0.0");
+		capabilities.setCapability("pCloudy_DeviceFullName", "SAMSUNG  GalaxyJ7Pro, OS  Android 8.1.0");
+		capabilities.setCapability("platformVersion", "8.1.0");
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("automationName", "uiautomator2");
 		//capabilities.setCapability("pCloudy_ApplicationName", "pCloudySample_dailymoney.apk");
