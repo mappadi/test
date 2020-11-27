@@ -1,8 +1,10 @@
 package com.driverInstance;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebElement;
@@ -11,15 +13,31 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.SkipException;
 import com.propertyfilereader.PropertyFileReader;
+import com.ssts.pcloudy.Connector;
+import com.ssts.pcloudy.appium.PCloudyAppiumSession;
+import com.ssts.pcloudy.dto.appium.booking.BookingDtoDevice;
+import com.ssts.pcloudy.dto.device.MobileDevice;
+import com.ssts.pcloudy.dto.file.PDriveFileDTO;
 import com.utility.Utilities;
 import com.zee5.ApplicasterPages.AMDOnboardingScreen;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+
+
+import com.ssts.pcloudy.Connector;
+import com.ssts.pcloudy.Version;
+import java.util.Date;
+
+import com.ssts.pcloudy.dto.appium.booking.BookingDtoDevice;
+import com.ssts.pcloudy.dto.device.MobileDevice;
+import com.ssts.pcloudy.dto.file.PDriveFileDTO;
+import com.ssts.pcloudy.exception.ConnectError;
 
 public class DriverInstance extends Drivertools {
 
@@ -30,8 +48,10 @@ public class DriverInstance extends Drivertools {
 			System.out.println("Platform is " + getPlatform());
 			switch (getPlatform()) {
 			case "Android":
+				
 				tlDriver.set((AppiumDriver<WebElement>) new AndroidDriver<WebElement>(new URL(getremoteUrl()),
 						this.generateAndroidCapabilities(Application)));
+		
 				util.waitForElementDisplayed(AMDOnboardingScreen.objWaitForSplashScreenDisapear, 240);
 				break;
 
@@ -56,6 +76,8 @@ public class DriverInstance extends Drivertools {
 		Utilities util = new Utilities();
 		util.initDriver();
 	}
+	
+	
 
 	/**
 	 * @param application
@@ -66,11 +88,11 @@ public class DriverInstance extends Drivertools {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("pCloudy_Username", "murali.appadi@zee.com");
 		capabilities.setCapability("pCloudy_ApiKey", "qfxsr6sws4b79wv2998wjn35");
-		capabilities.setCapability("pCloudy_DurationInMinutes", 20);
-		capabilities.setCapability("newCommandTimeout", 600);
-		capabilities.setCapability("launchTimeout", 90000);
-		capabilities.setCapability("pCloudy_DeviceFullName", "SAMSUNG  GalaxyJ7Pro, OS  Android 8.1.0");
-		capabilities.setCapability("platformVersion", "8.1.0");
+		capabilities.setCapability("pCloudy_ApplicationName", "Zee5.apk");
+		capabilities.setCapability("pCloudy_DurationInMinutes", 5);
+		capabilities.setCapability("pCloudy_DeviceManufacturer", "Samsung");
+		capabilities.setCapability("pCloudy_DeviceVersion", "8.1.0");
+		
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("automationName", "uiautomator2");
 		//capabilities.setCapability("pCloudy_ApplicationName", "pCloudySample_dailymoney.apk");
@@ -80,7 +102,7 @@ public class DriverInstance extends Drivertools {
 		capabilities.setCapability("pCloudy_EnableVideo", "false");
 		capabilities.setCapability("pCloudy_EnablePerformanceData", "false");
 		capabilities.setCapability("pCloudy_EnableDeviceLogs", "false");
-		AndroidDriver<WebElement> driver = new AndroidDriver<WebElement>(new URL("https://device.pcloudy.com/appiumcloud/wd/hub"), capabilities);
+		//AndroidDriver<WebElement> driver = new AndroidDriver<WebElement>(new URL("https://device.pcloudy.com/appiumcloud/wd/hub"), capabilities);
 
 
 
