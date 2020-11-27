@@ -62,6 +62,13 @@ public class DriverInstance extends Drivertools {
 	 * @throws Exception
 	 */
 	protected DesiredCapabilities generateAndroidCapabilities(String application) {
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("pCloudy_Username", "murali.appadi@zee.com");
+		capabilities.setCapability("pCloudy_ApiKey", "qfxsr6sws4b79wv2998wjn35");
+		//capabilities.setCapability("pCloudy_ApplicationName", "pCloudyAppiumDemo.apk");
+		capabilities.setCapability("pCloudy_DurationInMinutes", 10);
+		capabilities.setCapability("pCloudy_DeviceFullName", "SAMSUNG  GalaxyJ7Pro, OS  Android 8.1.0");
+		capabilities.setCapability(MobileCapabilityType.UDID,"420060699b4c54f1");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 300);
 //		capabilities.setCapability("compressXml", "true");
