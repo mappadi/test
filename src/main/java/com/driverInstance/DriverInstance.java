@@ -1,6 +1,7 @@
 package com.driverInstance;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.PageLoadStrategy;
@@ -61,14 +62,28 @@ public class DriverInstance extends Drivertools {
 	 * @return Android capabilities
 	 * @throws Exception
 	 */
-	protected DesiredCapabilities generateAndroidCapabilities(String application) {
+	protected DesiredCapabilities generateAndroidCapabilities(String application) throws MalformedURLException {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("pCloudy_Username", "murali.appadi@zee.com");
 		capabilities.setCapability("pCloudy_ApiKey", "qfxsr6sws4b79wv2998wjn35");
-		//capabilities.setCapability("pCloudy_ApplicationName", "pCloudyAppiumDemo.apk");
-		capabilities.setCapability("pCloudy_DurationInMinutes", 10);
-		capabilities.setCapability("pCloudy_DeviceFullName", "SAMSUNG  GalaxyJ7Pro, OS  Android 8.1.0");
-		capabilities.setCapability(MobileCapabilityType.UDID,"420060699b4c54f1");
+		capabilities.setCapability("pCloudy_DurationInMinutes", 20);
+		capabilities.setCapability("newCommandTimeout", 600);
+		capabilities.setCapability("launchTimeout", 90000);
+		capabilities.setCapability("pCloudy_DeviceFullName", "ONEPLUS_5_Android_9.0.0_d9e3e");
+		capabilities.setCapability("platformVersion", "9.0.0");
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("automationName", "uiautomator2");
+		//capabilities.setCapability("pCloudy_ApplicationName", "pCloudySample_dailymoney.apk");
+		capabilities.setCapability("appPackage", "com.graymatrix.did");
+		capabilities.setCapability("appActivity", "com.applicaster.componentsapp.IntroActivity");
+		capabilities.setCapability("pCloudy_WildNet", "false");
+		capabilities.setCapability("pCloudy_EnableVideo", "false");
+		capabilities.setCapability("pCloudy_EnablePerformanceData", "false");
+		capabilities.setCapability("pCloudy_EnableDeviceLogs", "false");
+		AndroidDriver<WebElement> driver = new AndroidDriver<WebElement>(new URL("https://device.pcloudy.com/appiumcloud/wd/hub"), capabilities);
+
+
+
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 300);
 //		capabilities.setCapability("compressXml", "true");

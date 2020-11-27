@@ -140,7 +140,7 @@
 			<class name="com.zee5.ApplicasterScripts.Android_AppLaunch" />
 		</classes>
 	</test>
-
+<!--
 	 <test name="Android_Onboarding_Suite1">
 		<classes>
 			<class
@@ -236,5 +236,5 @@
 			<class name="com.zee5.ApplicasterScripts.Android_ClubPack" />
 		</classes>
 	</test>
-
+-->
 </suite>
