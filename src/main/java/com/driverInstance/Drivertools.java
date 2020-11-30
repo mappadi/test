@@ -229,11 +229,11 @@ public class Drivertools {
 	public Drivertools(String application) {
 		setHandler(new PropertyFileReader("properties/Execution.properties"));
 		setHost(getHandler().getproperty("HOST_IP"));
-		//setPort(Integer.parseInt(getHandler().getproperty("HOST_PORT")));
+		setPort(Integer.parseInt(getHandler().getproperty("HOST_PORT")));
 		setappTimeOut(Integer.parseInt(getHandler().getproperty("APP_TIMEOUT")));
-		//setremoteUrl("http://" + getHost() + ":" + getPort() + "/wd/hub");
+		setremoteUrl("http://" + getHost() + ":" + getPort() + "/wd/hub");
 		//setremoteUrl("https://device.pcloudy.com/appiumcloud/wd/hub");
-		setremoteUrl("https://" + getHost() + "/wd/hub");
+		//setremoteUrl("https://" + getHost() + "/wd/hub");
 
 		setHandler(new PropertyFileReader("properties/AppPackageActivity.properties"));
 		setAppPackage(getHandler().getproperty(application + "Package"));

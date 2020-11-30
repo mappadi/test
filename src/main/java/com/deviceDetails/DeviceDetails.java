@@ -32,10 +32,10 @@ public class DeviceDetails {
 			getListOfDevicesConnected();
 			String cmd = "";
 			if (AppDetails.isEmpty()) {
-				cmd = "adb -s " + devices.get(0) + " shell \"dumpsys package " + str + " | grep versionName\"";
+				cmd = "/usr/local/bin/adb  -s " + devices.get(0) + " shell \"dumpsys package " + str + " | grep versionName\"";
 				AppDetails = str;
 			} else if (!AppDetails.isEmpty()) {
-				cmd = "adb -s " + devices.get(1) + " shell \"dumpsys package " + str + " | grep versionName\"";
+				cmd = "/usr/local/bin/adb  -s " + devices.get(1) + " shell \"dumpsys package " + str + " | grep versionName\"";
 			}
 			Process p = Runtime.getRuntime().exec(cmd);
 			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -53,7 +53,7 @@ public class DeviceDetails {
 	public static String getAppVersion(String packageName) {
 
 		try {
-			cmd = "adb  shell \"dumpsys package " + packageName + " | grep versionName\"";
+			cmd = "/usr/local/bin/adb   shell \"dumpsys package " + packageName + " | grep versionName\"";
 			Process p = Runtime.getRuntime().exec(cmd);
 			BufferedReader br = new BufferedReader(new InputStreamReader(p.getInputStream()));
 			while ((DeviceModel = br.readLine()) != null) {
@@ -71,7 +71,7 @@ public class DeviceDetails {
 		getListOfDevicesConnected();
 		try {
 			for (int i = 0; i <= getListOfDevicesConnected().size() - 1; i++) {
-				String cmd3 = "adb -s " + devices.get(i) + " shell getprop ro.product.manufacturer";
+				String cmd3 = "/usr/local/bin/adb  -s " + devices.get(i) + " shell getprop ro.product.manufacturer";
 				Process process = Runtime.getRuntime().exec(cmd3);
 				BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
 				deviceManufacturer.add(br.readLine());
@@ -85,7 +85,7 @@ public class DeviceDetails {
 
 	public static String getTheOSVersion() {
 		try {
-			String cmd1 = "adb shell getprop ro.build.version.release";
+			String cmd1 = "/usr/local/bin/adb  shell getprop ro.build.version.release";
 			Process p1 = Runtime.getRuntime().exec(cmd1);
 			BufferedReader br = new BufferedReader(new InputStreamReader(p1.getInputStream()));
 			while ((outputText1 = br.readLine()) != null) {
@@ -100,7 +100,7 @@ public class DeviceDetails {
 	}
 
 	public static void removePermisson(String packagename) {
-		String cmd2 = "adb shell pm clear " + packagename;
+		String cmd2 = "/usr/local/bin/adb  shell pm clear " + packagename;
 		try {
 			Runtime.getRuntime().exec(cmd2);
 		} catch (IOException e) {
@@ -110,7 +110,7 @@ public class DeviceDetails {
 
 	public static ArrayList<String> getListOfDevicesConnected() {
 		try {
-			String cmd2 = "adb devices";
+			String cmd2 = "/usr/local/bin/adb  devices";
 			Process p1 = Runtime.getRuntime().exec(cmd2);
 			BufferedReader br = new BufferedReader(new InputStreamReader(p1.getInputStream()));
 			String s = "";
@@ -149,7 +149,7 @@ public class DeviceDetails {
 
 		try {
 			for (int i = 0; i <= getListOfDevicesConnected().size() - 1; i++) {
-				String cmd3 = "adb -s " + devices.get(i) + " shell getprop ro.build.version.release";
+				String cmd3 = "/usr/local/bin/adb  -s " + devices.get(i) + " shell getprop ro.build.version.release";
 				Process process = Runtime.getRuntime().exec(cmd3);
 				BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
 				deviceOS.add(br.readLine());
